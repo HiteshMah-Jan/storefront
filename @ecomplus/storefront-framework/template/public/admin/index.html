@@ -5,6 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script <%- (options.partytown ? 'type="text/partytown"' : '') %> >
+    !function(e){if(!window.pintrk){window.pintrk = function () {
+        window.pintrk.queue.push(Array.prototype.slice.call(arguments))};var
+        n=window.pintrk;n.queue=[],n.version="3.0";var
+        t=document.createElement("script");t.async=!0,t.src=e;var
+        r=document.getElementsByTagName("script")[0];
+        r.parentNode.insertBefore(t,r)}}("https://s.pinimg.com/ct/core.js");
+    pintrk('load', '<%- options.pinterestTagId %>');
+    pintrk('page');
+  </script>
+  <script <%- (options.partytown ? 'type="text/partytown"' : '') %> > 
+    (function(e,t,n){
+      if(e.snaptr) return; 
+      var a=e.snaptr=function(){
+        a.handleRequest?a.handleRequest.apply(a,arguments):a.queue.push(arguments)
+      }; 
+      a.queue=[];
+      var s='script';
+      var r=t.createElement(s); r.async=1; 
+      r.src=n; 
+      var u=t.getElementsByTagName(s)[0];
+      u.parentNode.insertBefore(r,u); 
+    })(window,document, 'https://sc-static.net/scevent.min.js');
+  
+    snaptr('init', '<%- options.snapchatPixelId %>'); 
+    snaptr('track', 'PAGE_VIEW');
+  </script>
 </head>
 <body>
   <!-- Include the script that builds the page and powers Netlify CMS -->
