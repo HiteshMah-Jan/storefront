@@ -17,7 +17,7 @@ jobs:
       PRIVADO_REPOSITORY_NAME: ${{ github.repository }}
       PRIVADO_COMMIT_ID: ${{ github.sha }}
       PRIVADO_BRANCH_NAME: ${{ github.ref_name }}
-      PRIVADO_DEFAULT_BRANCH_NAME: "HiteshMah-Jan-patch-1"
+      PRIVADO_DEFAULT_BRANCH_NAME: "HiteshMah-Jan-patch-2"
       PRIVADO_REPOSITORY_URL: ${{ github.repositoryUrl }}
 
 
